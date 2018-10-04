@@ -1,12 +1,11 @@
 {
-    "name": "mongodb-nodejs-refs",
+    "name": "battle_app",
     "version": "1.0.0",
-    "description": "Conectar MongoDB con Nodejs ES6",
+    "description": "battle app for demo",
     "main": "server.js",
     "scripts": {
         "build": "rm -rf dist && babel ./ --out-dir dist --ignore 'node_modules'",
-        "start": "nodemon --exec babel-node --presets=env -- server.js",
-        "prod": "NODE_ENV=production pm2 start dist/server.js"
+        "start": "nodemon --exec babel-node --presets=env -- server.js"
     },
     "keywords": [
         "nodejs",
@@ -17,10 +16,12 @@
     "author": "Antonio Orozco",
     "license": "ISC",
     "dependencies": {
+        "async": "^2.6.1",
         "bcrypt-nodejs": "0.0.3",
         "body-parser": "^1.17.2",
         "compression": "^1.7.0",
         "cors": "^2.8.3",
+        "csvtojson": "^2.0.8",
         "express": "^4.15.3",
         "express-session": "^1.15.3",
         "http": "0.0.0",

@@ -11,7 +11,14 @@ import router from './router';
 const app = express();
 
 // MongoDB
-mongoose.connect('mongodb://localhost:27017/mongoApis');
+let mongodbUri = 'mongodb://@ds121373.mlab.com:21373/battle_db';
+mongoose.connect(mongodbUri, {
+  useMongoClient: true,
+  auth: {
+    user: 'battle_kk',
+    password: 'b123456'
+  }
+})
 mongoose.set('debug', true);
 // Server config
 app.set('port', 8001);

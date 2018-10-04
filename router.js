@@ -1,14 +1,11 @@
-import * as usr from './controllers/user';
+import * as btl from './controllers/battle';
 
 const router = (app) => {
-    /**
-     * User API
-     */
-    app.put('/api/user', usr.add);
-    app.post('/api/user', usr.update);
-    app.patch('/api/user', usr.remove);
-    app.get('/api/user', usr.user);
-    app.get('/api/users', usr.users);
+    app.post('/api/battle/add', btl.add);
+    app.get('/api/battle/list', btl.list);
+    app.get('/api/battle/count', btl.count);
+    app.get('/api/battle/search', btl.searchBattle);
+    app.get('/api/battle/stats', btl.statistics);
 };
 
 export default router;
